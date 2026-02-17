@@ -19,7 +19,7 @@ To get started with this project, follow the instructions below.
 
 ### Prerequisites
 
-Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed on your machine.
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine. You can use either npm (comes with Node.js) or [Yarn](https://yarnpkg.com/).
 
 ### Installation
 
@@ -32,6 +32,8 @@ Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com
 2. Install the dependencies:
    ```
    yarn install
+   # or
+   npm install
    ```
 
 ### Running the Server
@@ -40,9 +42,44 @@ To start the server with automatic reloading, use the following command:
 
 ```
 yarn start
+# or
+npm start
 ```
 
 The server will be running on [http://localhost:8001](http://localhost:8001).
+
+## API Endpoints
+
+The server provides the following endpoints:
+
+- **GET /** - Returns a welcome message
+  ```json
+  { "message": "Express server is running" }
+  ```
+
+- **GET /tasks** - Returns a list of tasks
+  ```json
+  [
+    { "id": 1, "title": "Task 1", "completed": false },
+    { "id": 2, "title": "Task 2", "completed": true },
+    { "id": 3, "title": "Task 3", "completed": false }
+  ]
+  ```
+
+- **POST /tasks** - Creates a new task
+  ```json
+  { "message": "Task created successfully" }
+  ```
+
+- **GET /health** - Health check endpoint
+  ```json
+  { "status": "ok" }
+  ```
+
+## Environment Variables
+
+- `PORT` - Server port (default: 8001)
+- `NODE_ENV` - Environment mode (development/production)
 
 ### Building the Docker Image
 
