@@ -1,4 +1,4 @@
-# Express Server Project
+We need to edit the docker-compose.yml file to run both the Python server (on port 8000) and the Node server (on port 8001) together. # Express Server Project
 
 This project is a simple Express server that listens on port 8001. It is set up to use nodemon for automatic code reloading during development.
 
